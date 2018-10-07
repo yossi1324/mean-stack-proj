@@ -9,10 +9,10 @@ import {
   MatButtonModule,
   MatCardModule,
   MatExpansionModule,
-  MatInputModule,
+  MatInputModule, MatPaginatorModule,
   MatProgressSpinnerModule,
   MatToolbarModule
-} from "@angular/material";
+} from '@angular/material';
 import { HeaderComponent } from "./header/header.component";
 import { PostListComponent } from "./posts/post-list/post-list.component";
 import { HttpClientModule } from "@angular/common/http";
@@ -36,7 +36,8 @@ import { AppRoutingModule } from "./app-routing.module";
     MatToolbarModule,
     MatExpansionModule,
     MatProgressSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
