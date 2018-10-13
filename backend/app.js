@@ -10,7 +10,9 @@ const app = express();
 
 mongoose
   .connect(
-    "mongodb+srv://yossi:EvxEgZ7452cPhriW@cluster0-i4y0p.mongodb.net/test?retryWrites=true",
+    "mongodb+srv://yossi:" +
+      process.env.MONGO_ATLAS_PW +
+      "@cluster0-i4y0p.mongodb.net/test?retryWrites=true",
     { useNewUrlParser: true }
   )
   .then(() => {
@@ -19,7 +21,6 @@ mongoose
   .catch(() => {
     console.log("Connection to database failed !");
   });
-
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
